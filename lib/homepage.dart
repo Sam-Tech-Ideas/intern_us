@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import './screens/home/home.dart';
 import './screens/search/search.dart';
 import './screens/profile/profile.dart';
+
+
+
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
 
@@ -28,13 +31,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-           child: Text(
-            "Home",style: TextStyle(
-              fontSize: 50
-            ),
-           ),
- ) ,
+      body:_pages[_selectedIndex]
+  ,
  bottomNavigationBar: BottomNavigationBar(
   onTap: _navBottom,
   currentIndex: _selectedIndex,
@@ -43,8 +41,7 @@ class _HomePageState extends State<HomePage> {
   BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
   BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
   BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
-  //BottomNavigationBarItem(icon: Icon(Icons.home)),
-  
+ 
  ]),
     );
   }
