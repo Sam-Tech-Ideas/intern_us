@@ -1,5 +1,8 @@
 
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:intern_us/screens/home/WorkCategories.dart';
 
 
 
@@ -19,7 +22,7 @@ class _HomeState extends State<Home> {
         child: Column(children: [
           //Appbar
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -59,7 +62,7 @@ class _HomeState extends State<Home> {
             child: TextField(
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(width:0.0 ),
+                borderSide: const BorderSide(width:0.0 ),
                 ),
                 fillColor: Colors.deepPurple[100],
                 filled:true,
@@ -94,19 +97,17 @@ class _HomeState extends State<Home> {
               ],
                 ),
           ) ,
-             
-      
-          //search bar
+                //search bar
        Container(
-                    height: MediaQuery.of(context).size.height/4,
+                    height: MediaQuery.of(context).size.height/5,
                     width: MediaQuery.of(context).size.width/1.06,
                     decoration: BoxDecoration(
                        color: Colors.deepPurple[100],
                      borderRadius: BorderRadius.circular(15),
                     ),
                      child:Column(
-                    children: [
-                      Row(
+                     children: [
+            Row(
                          children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
@@ -130,7 +131,7 @@ class _HomeState extends State<Home> {
                                 TextSpan(
                                   text: "Innovrik Company LLB",
                                   style: TextStyle(
-                                    color: Colors.black26,fontSize: 14,
+                                    color: Colors.black12,fontSize: 14,
                                   )
                                 ),
                               ]
@@ -139,23 +140,82 @@ class _HomeState extends State<Home> {
                        ],
                       ),
                       SizedBox(height: 10),
-                      Container(
-                        height: 30,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.black12,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Center(
-                          child: Text("demo",
-                          style: TextStyle(
-                            color: Colors.black12,
-                          ),),
-                        ),
+                      Row(
+                        mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                        children: [
+                           WorkCategories(label: "On-site"),
+                             WorkCategories(label: "Design"),
+                               WorkCategories(label: "Fresher"),
+                        ],
+                      ),
+                      SizedBox(height: 22),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text("Accra, Ghana", style: TextStyle(color: Colors.black ),
+                         ),
+                          Text("", style: TextStyle(color: Colors.black ),)
+                         
+                        ],
                       )
+                      
+                     
                     ],
                  ) ,
-                   ) ,
+              ) ,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                      Container(
+                        alignment: Alignment.bottomLeft,
+                        child: Text("Recently added", style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          
+                        ),
+                        ),
+                        
+                      ), 
+
+                      
+                //padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                 Container(
+                  alignment: Alignment.bottomLeft,
+                  child: Text("See all", style: TextStyle(color: Colors.black,
+                  fontSize: 16),
+                  ),
+
+                ),
+             // )
+                  ],
+                  
+                ),
+                  ),
+                Container(
+                 height: 160,
+                 width: 150,
+                 decoration: BoxDecoration(
+                  color: Colors.deepPurple[100],
+                  borderRadius: BorderRadius.circular(10),
+                 ),
+                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("demo"),
+                    ),
+                    Text("demo", style: TextStyle(fontSize: 16, color: Colors.black),),
+                     Text("Company", style: TextStyle(fontSize: 16, color: Colors.black),),
+                     Text("Remote", style: TextStyle(fontSize: 16, color: Colors.black),) 
+                 
+                  ],
+                 ),
+                ),
+            
+             
           //
         ]),
       ),
