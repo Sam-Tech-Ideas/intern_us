@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:intern_us/screens/splash/splash.dart';
 import 'homepage.dart';
-//import 'package:firebase_core/firebase_core.dart';
-void main()  {
- // WidgetsFlutterBinding.ensureInitialized();
-//  await Firebase.initializeApp();
+import 'package:firebase_core/firebase_core.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
