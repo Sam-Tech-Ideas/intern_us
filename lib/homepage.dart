@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intern_us/screens/details/details.dart';
 import './screens/home/home.dart';
-import './screens/search/search.dart';
+
 import './screens/profile/profile.dart';
 
 
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget>_pages =[
     Home(),
-    DetailPage(),
+  
     Profile(),
 
   ] ;
@@ -40,8 +40,7 @@ class _HomePageState extends State<HomePage> {
   
   items: [
   BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-  BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-  BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
+   BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
  
  ]),
     );

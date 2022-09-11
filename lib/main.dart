@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:intern_us/screens/splash/splash.dart';
 import 'homepage.dart';
 //import 'package:firebase_core/firebase_core.dart';
@@ -15,7 +16,7 @@ const MyApp({ Key? key }) : super(key: key);
   Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SplashScreen(),
+      home:HomePage(),
     
      
     );
