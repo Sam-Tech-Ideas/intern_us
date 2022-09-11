@@ -1,8 +1,8 @@
 
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:intern_us/screens/home/WorkCategories.dart';
+import 'package:intern_us/screens/home/recent.dart';
 
 
 
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
           ) ,
                 //search bar
        Container(
-                    height: MediaQuery.of(context).size.height/5,
+                    height: MediaQuery.of(context).size.height/4.5,
                     width: MediaQuery.of(context).size.width/1.06,
                     decoration: BoxDecoration(
                        color: Colors.deepPurple[100],
@@ -164,19 +164,22 @@ class _HomeState extends State<Home> {
                  ) ,
               ) ,
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                      Container(
-                        alignment: Alignment.bottomLeft,
-                        child: Text("Recently added", style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          alignment: Alignment.bottomLeft,
+                          child: Text("Recently added", style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            
+                          ),
+                          ),
                           
                         ),
-                        ),
-                        
                       ), 
 
                       
@@ -193,27 +196,42 @@ class _HomeState extends State<Home> {
                   
                 ),
                   ),
-                Container(
-                 height: 160,
-                 width: 150,
-                 decoration: BoxDecoration(
-                  color: Colors.deepPurple[100],
-                  borderRadius: BorderRadius.circular(10),
-                 ),
-                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage("demo"),
+                  Row(
+                    children: [
+                       Padding(
+                       padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Recent( company:"Google", JobName: "Web Developer", location:"Hybrid"),
                     ),
-                    Text("demo", style: TextStyle(fontSize: 16, color: Colors.black),),
-                     Text("Company", style: TextStyle(fontSize: 16, color: Colors.black),),
-                     Text("Remote", style: TextStyle(fontSize: 16, color: Colors.black),) 
-                 
-                  ],
-                 ),
-                ),
+                     Padding(
+                       padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Recent( company:"Google", JobName: "Cybersecurity", location:"Hybrid"),
+                    ),
+                   
+                   
+                    ],
+                  ),
+                   
+                 // Recent(JobName: "Frontend Developer", imgSrc: "", company: "Google Inc", location: "remote")
+                // Container(
+                //  height: 160,
+                //  width: 150,
+                //  decoration: BoxDecoration(
+                //   color: Colors.deepPurple[100],
+                //   borderRadius: BorderRadius.circular(10),
+                //  ),
+                //  child: Column(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     CircleAvatar(
+                //       radius: 30,
+                //       backgroundImage: AssetImage("demo"),
+                //     ),
+                //     Text("demo", style: TextStyle(fontSize: 16, color: Colors.black),),
+                //      Text("Company", style: TextStyle(fontSize: 16, color: Colors.black),),
+                //      Text("Remote", style: TextStyle(fontSize: 16, color: Colors.black),)  
+                //   ],
+                //  ),
+                // ),
             
              
           //

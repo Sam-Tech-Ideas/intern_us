@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intern_us/screens/details/details.dart';
 import './screens/home/home.dart';
 import './screens/search/search.dart';
 import './screens/profile/profile.dart';
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget>_pages =[
     Home(),
-    Search(),
+    DetailPage(),
     Profile(),
 
   ] ;
